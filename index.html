@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matriks 4x4</title>
+    <link rel="stylesheet" href="stile.css">
+</head>
+<body>
+    <div>
+        <div class="header">
+            <h1>Kalkulator Matriks 4x4</h1>
+            <p>Menghitung determinan menggunakan metode Minor-Kofaktor dan Sarrus</p>
+        </div>
+
+        <div class="matrix-container">
+            <h2>Masukkan Nilai Matriks 4x4:</h2>
+            <div class="matrix-grid">
+                <input type="number" id="cell0" class="matrix-cell" value="-1">
+                <input type="number" id="cell1" class="matrix-cell" value="-3">
+                <input type="number" id="cell2" class="matrix-cell" value="10">
+                <input type="number" id="cell3" class="matrix-cell" value="5">
+                <input type="number" id="cell4" class="matrix-cell" value="-6">
+                <input type="number" id="cell5" class="matrix-cell" value="4">
+                <input type="number" id="cell6" class="matrix-cell" value="1">
+                <input type="number" id="cell7" class="matrix-cell" value="3">
+                <input type="number" id="cell8" class="matrix-cell" value="-10">
+                <input type="number" id="cell9" class="matrix-cell" value="0">
+                <input type="number" id="cell10" class="matrix-cell" value="1">
+                <input type="number" id="cell11" class="matrix-cell" value="8">
+                <input type="number" id="cell12" class="matrix-cell" value="3">
+                <input type="number" id="cell13" class="matrix-cell" value="5">
+                <input type="number" id="cell14" class="matrix-cell" value="-9">
+                <input type="number" id="cell15" class="matrix-cell" value="-2">
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-success" onclick="fillRandom()">Acak Matriks</button>
+                <button class="btn btn-primary" onclick="calculate()">Hitung Determinan</button>
+                <button class="btn btn-danger" onclick="resetMatrix()">Reset Matriks</button>
+            </div>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+                <p>⏳ Menghitung dengan kedua metode...</p>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('unified')">Penyelesaian</button>
+            <button class="tab-button" onclick="showTab('method1')">Detail Metode 1</button>
+            <button class="tab-button" onclick="showTab('method2')">Detail Metode 2</button>
+            <button class="tab-button" onclick="showTab('kesimpulan')">Kesimpulan</button>
+        </div>
+
+        <div id="unified" class="tab-pane active"></div>
+        <div id="method1" class="tab-pane"></div>
+        <div id="method2" class="tab-pane"></div>
+        <div id="kesimpulan" class="tab-pane"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
